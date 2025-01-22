@@ -1,0 +1,129 @@
+---
+import background from '../assets/background.svg';
+---
+
+<div class="banner">
+  <img id="background" src={background.src} alt="" fetchpriority="high" />
+  <div class="banner__parents__container">
+    <div class="banner__parents">
+      <p>Maria Leny Garcia Flores</p>
+      <p>Jesus Menendez Baños</p>
+    </div>
+    <div class="banner__parents">
+      <p>Maria Griselda Garcia Flores</p>
+      <p>Jose Mauricio Arce Torrez</p>
+    </div>
+  </div>
+  <p>INVITAN A CELEBRAR EL BAUTISMO Y CUMPLEAÑOS DE</p>
+  <h1 class="title">Alice Dayana Menendez Garcia</h1>
+  <div class="banner__place-and-date">
+    <p>Bautismo</p>
+    <a
+      href="https://maps.app.goo.gl/NnyFWeJw5SyGa9mU9"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Parroquia San Pedro
+    </a>
+    <p>01/02/2022 - 13:45</p>
+  </div>
+  <div class="banner__place-and-date">
+    <p>Cumpleaños</p>
+    <a
+      href="https://maps.app.goo.gl/XBG5niCozjBap1HD7"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Salón de Eventos YOIS Sud
+    </a>
+    <p>01/02/2022 - 15:45</p>
+  </div>
+</div>
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(100px);
+  }
+
+  .banner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    p {
+      text-align: center;
+    }
+
+    .banner__parents__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+
+      .banner__parents {
+        font-style: italic;
+        text-align: center;
+
+        p {
+          margin: 0.1em 0;
+        }
+      }
+    }
+
+    .banner__place-and-date {
+      margin: 20px 0;
+      text-align: center;
+
+      a {
+        color: #39637e;
+      }
+
+      p {
+        margin: 0.1em 0;
+      }
+    }
+
+    .banner__flower {
+      position: absolute;
+      width: 300px;
+
+      &.banner__flower--top {
+        top: -160px;
+      }
+
+      &.banner__flower--top-left {
+        left: -175px;
+        top: -150px;
+      }
+
+      &.banner__flower--top-right {
+        right: -175px;
+        top: -150px;
+      }
+
+      &.banner__flower--bottom {
+        bottom: -175px;
+      }
+
+      &.banner__flower--bottom-left {
+        left: -150px;
+        bottom: -100px;
+      }
+
+      &.banner__flower--bottom-right {
+        right: -150px;
+        bottom: -100px;
+      }
+    }
+  }
+</style>

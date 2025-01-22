@@ -1,0 +1,96 @@
+<section class="location">
+  <h1 class="title title--secondary">Lugar y Fecha</h1>
+  <div class="map__container">
+    <div class="map__view">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.444466045668!2d-66.14868802328282!3d-17.390444883497164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e373ff41fd87cd%3A0xc53805a2c789d929!2sSan%20Pedro%20Church!5e0!3m2!1sen!2sbo!4v1737496619197!5m2!1sen!2sbo"
+        class="map__iframe"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="map__description">
+      <div class="map__description__section">
+        <h1 class="title title--secondary">Bautismo</h1>
+      </div>
+      <div class="map__description__section">
+        <fa-icon [icon]="['fas', 'map-marker-alt']" size="lg"> </fa-icon>Lugar:
+        <div>Parroquia San Pedro - Av. Heroínas y Parque La Torre</div>
+      </div>
+      <div class="map__description__section">
+        <fa-icon [icon]="['fas', 'calendar-alt']" size="lg"></fa-icon>Fecha:
+        <div>Sábado, 1 de Febrero de 2025 - 13:45 Hrs.</div>
+      </div>
+    </div>
+  </div>
+  <div class="map__container">
+    <div class="map__description">
+      <div class="map__description__section">
+        <h1 class="title title--secondary">Cumpleaños</h1>
+      </div>
+      <div class="map__description__section">
+        <fa-icon [icon]="['fas', 'map-marker-alt']" size="lg"> </fa-icon>Lugar:
+        <div>
+          Salón de Eventos YOIS Sud - C. Río Caine entre R. Soruco y Valenzuela
+        </div>
+      </div>
+      <div class="map__description__section">
+        <fa-icon [icon]="['fas', 'calendar-alt']" size="lg"></fa-icon>Fecha:
+        <div>Sábado, 1 de Febrero de 2025 - 15:45 Hrs.</div>
+      </div>
+    </div>
+    <div class="map__view">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6140272716475!2d-66.15682272328222!3d-17.430301083464087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e37300442b2f0d%3A0x48309e29493886a7!2sSal%C3%B3n%20De%20Eventos%20YOIS%20Sud!5e0!3m2!1sen!2sbo!4v1737496673403!5m2!1sen!2sbo"
+        class="map__iframe"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .location {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .map__container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .map__view {
+      border-radius: 10px;
+      border: 2px solid #ebb551;
+      flex-grow: 1;
+      padding: 7px;
+
+      .map__iframe {
+        border: 0;
+        height: 400px;
+        width: 100%;
+      }
+    }
+
+    .map__description {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center;
+
+      .map__description__section {
+        margin: 20px;
+        text-align: center;
+
+        fa-icon {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+</style>
