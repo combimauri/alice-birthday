@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 
 @font-face {
   font-family: Amsterdam;
-  src: url('../assets/amsterdam_4/Amsterdam4.ttf');
+  src: url("../assets/amsterdam_4/Amsterdam4.ttf");
 }
 
 body {
-  color: #39637e;
-  fill: #39637e;
-  font-family: 'DM Sans', sans-serif;
+  color: #5c3972;
+  fill: #5c3972;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.125rem;
   margin: 0;
+}
+
+p {
+  z-index: 2;
+  position: relative;
 }
 
 section {
@@ -42,12 +47,24 @@ section {
 }
 
 .title {
-  font-family: 'Amsterdam', sans-serif;
-  font-size: 3.5rem;
+  font-family: "Amsterdam", sans-serif;
+  font-size: 2.5rem;
   margin: 0;
   text-align: center;
+  z-index: 2;
 
   &.title--secondary {
     font-size: 2.5rem;
+  }
+}
+
+.dark-section {
+  background-color: #5c3972;
+  color: white;
+}
+
+@media (min-width: 1400px) {
+  .title {
+    font-size: 3.5rem;
   }
 }

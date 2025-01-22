@@ -1,0 +1,68 @@
+---
+import castle from "../assets/castillo-1.png";
+import peach from "../assets/peach.png";
+---
+
+<div class="footer">
+  <img class="castle" src={castle.src} alt="Circulos" fetchpriority="high" />
+  <p>¡Te esperamos!</p>
+  <img class="peach" src={peach.src} alt="Circulos" fetchpriority="high" />
+</div>
+
+<style>
+  .footer {
+    background-color: #5c3972;
+    min-height: 41%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  p {
+    font-size: 40px;
+  }
+
+  .castle {
+    left: 20%;
+    bottom: 0%;
+    width: 30%;
+  }
+
+  .peach {
+    right: 20%;
+    bottom: -12px;
+    width: 12%;
+  }
+
+  @media (min-width: 480px) {
+    .castle {
+      left: 20%;
+      bottom: 0%;
+      width: 20%;
+    }
+
+    .peach {
+      right: 20%;
+      bottom: -20px;
+      width: 10%;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .castle {
+      width: 12%;
+    }
+
+    .peach {
+      width: 4%;
+      bottom: -15px;
+    }
+  }
+</style>

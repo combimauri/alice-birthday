@@ -1,0 +1,49 @@
+---
+import alice1 from "../assets/photos/alice1.jpeg";
+import alice2 from "../assets/photos/alice2.jpeg";
+import alice3 from "../assets/photos/alice3.jpeg";
+import alice4 from "../assets/photos/alice4.jpeg";
+import alice5 from "../assets/photos/alice5.jpeg";
+import alice6 from "../assets/photos/alice6.jpeg";
+import alice7 from "../assets/photos/alice7.jpg";
+import alice8 from "../assets/photos/alice8.png";
+---
+
+<div>
+  <section>
+    <h1 class="title title--secondary">Fotos</h1>
+    <p class="photo__description">
+      Tenemos un <a href="https://photos.app.goo.gl/R4UGSPb3CkKjfmpZ9" rel="noopener noreferrer" target="_blank">
+        álbum
+      </a> donde podrás agregar las fotos del festejo que tomes. De la misma manera nosotros agregaremos las fotos ahí.
+    </p>
+    <a id="gallery" href="https://photos.app.goo.gl/R4UGSPb3CkKjfmpZ9" target="_blank">
+      <img src={alice1.src} alt="Foto" />
+      <img src={alice2.src} alt="Foto" />
+      <img src={alice3.src} alt="Foto" />
+      <img src={alice4.src} alt="Foto" />
+      <img src={alice5.src} alt="Foto" />
+      <img src={alice6.src} alt="Foto" />
+      <img src={alice7.src} alt="Foto" />
+      <img src={alice8.src} alt="Foto" />
+    </a>
+  </section>
+</div>
+<style>
+  img {
+    width: 20%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  #gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+</style>

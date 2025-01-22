@@ -1,9 +1,12 @@
 ---
-import background from '../assets/background.svg';
+import background from "../assets/background.svg";
+import clouds from "../assets/nubes.png";
 ---
 
 <div class="banner">
   <img id="background" src={background.src} alt="" fetchpriority="high" />
+  <img id="clouds-left" class="clouds move-slow" src={clouds.src} alt="Nubes" fetchpriority="high" />
+  <img id="clouds-rigth" class="clouds move" src={clouds.src} alt="Nubes" fetchpriority="high" />
   <div class="banner__parents__container">
     <div class="banner__parents">
       <p>Maria Leny Garcia Flores</p>
@@ -17,23 +20,15 @@ import background from '../assets/background.svg';
   <p>INVITAN A CELEBRAR EL BAUTISMO Y CUMPLEAÑOS DE</p>
   <h1 class="title">Alice Dayana Menendez Garcia</h1>
   <div class="banner__place-and-date">
-    <p>Bautismo</p>
-    <a
-      href="https://maps.app.goo.gl/NnyFWeJw5SyGa9mU9"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
+    <p><i class="fa-solid fa-church"></i> Bautismo</p>
+    <a href="https://maps.app.goo.gl/NnyFWeJw5SyGa9mU9" rel="noopener noreferrer" target="_blank">
       Parroquia San Pedro
     </a>
     <p>01/02/2022 - 13:45</p>
   </div>
   <div class="banner__place-and-date">
-    <p>Cumpleaños</p>
-    <a
-      href="https://maps.app.goo.gl/XBG5niCozjBap1HD7"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
+    <p><i class="fa-solid fa-cake-candles"></i> Cumpleaños</p>
+    <a href="https://maps.app.goo.gl/XBG5niCozjBap1HD7" rel="noopener noreferrer" target="_blank">
       Salón de Eventos YOIS Sud
     </a>
     <p>01/02/2022 - 15:45</p>
@@ -124,6 +119,63 @@ import background from '../assets/background.svg';
         right: -150px;
         bottom: -100px;
       }
+    }
+  }
+
+  .clouds {
+    position: absolute;
+    opacity: 0.2;
+    width: 100%;
+    z-index: 1;
+  }
+
+  #clouds-left {
+    left: 25px;
+    top: -40px;
+  }
+
+  #clouds-rigth {
+    right: 25px;
+    top: -40px;
+  }
+
+  .move {
+    transform: translateY(0%);
+    animation: moveRightLeft 50s linear infinite; /* Animación continua */
+  }
+
+  .move-slow {
+    transform: translateY(0%);
+    animation: moveRightLeftSlow 50s linear infinite; /* Animación continua */
+  }
+
+  @keyframes moveRightLeft {
+    0% {
+      left: -10px;
+    }
+    50% {
+      left: calc(100% - 10px); /* Alcanza el borde derecho */
+    }
+    100% {
+      left: -10px; /* Regresa al borde izquierdo */
+    }
+  }
+
+  @keyframes moveRightLeftSlow {
+    0% {
+      left: -800px;
+    }
+    50% {
+      left: calc(100% - 800px); /* Alcanza el borde derecho */
+    }
+    100% {
+      left: -800px; /* Regresa al borde izquierdo */
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .clouds {
+      width: 40%;
     }
   }
 </style>

@@ -1,6 +1,12 @@
+---
+import circles from "../assets/circles.svg";
+---
+
 <section class="location">
   <h1 class="title title--secondary">Lugar y Fecha</h1>
   <div class="map__container">
+    <img class="circles left" src={circles.src} alt="Circulos" fetchpriority="high" />
+    <img class="circles right" src={circles.src} alt="Circulos" fetchpriority="high" />
     <div class="map__view">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.444466045668!2d-66.14868802328282!3d-17.390444883497164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e373ff41fd87cd%3A0xc53805a2c789d929!2sSan%20Pedro%20Church!5e0!3m2!1sen!2sbo!4v1737496619197!5m2!1sen!2sbo"
@@ -24,15 +30,15 @@
     </div>
   </div>
   <div class="map__container">
+    <img class="circles left" src={circles.src} alt="Circulos" fetchpriority="high" />
+    <img class="circles bottom" src={circles.src} alt="Circulos" fetchpriority="high" />
     <div class="map__description">
       <div class="map__description__section">
         <h1 class="title title--secondary">Cumpleaños</h1>
       </div>
       <div class="map__description__section">
         <fa-icon [icon]="['fas', 'map-marker-alt']" size="lg"> </fa-icon>Lugar:
-        <div>
-          Salón de Eventos YOIS Sud - C. Río Caine entre R. Soruco y Valenzuela
-        </div>
+        <div>Salón de Eventos YOIS Sud - C. Río Caine entre R. Soruco y Valenzuela</div>
       </div>
       <div class="map__description__section">
         <fa-icon [icon]="['fas', 'calendar-alt']" size="lg"></fa-icon>Fecha:
@@ -63,12 +69,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
 
     .map__view {
       border-radius: 10px;
-      border: 2px solid #ebb551;
+      border: 2px solid #f55bb4;
       flex-grow: 1;
       padding: 7px;
+      background-color: white;
+      z-index: 2;
 
       .map__iframe {
         border: 0;
@@ -90,6 +99,41 @@
         fa-icon {
           margin-right: 7px;
         }
+      }
+    }
+  }
+
+  .circles {
+    position: absolute;
+    width: 150px;
+    z-index: 1;
+    transform: rotate(-76deg);
+    transition: transform 0.3s ease;
+
+    &.left {
+      left: -80px;
+      top: -77px;
+    }
+
+    &.right {
+      right: 0px;
+      top: 0px;
+    }
+
+    &.bottom {
+      bottom: -80px;
+      right: 0px;
+    }
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .circles {
+      &.bottom {
+        right: -46px;
       }
     }
   }
