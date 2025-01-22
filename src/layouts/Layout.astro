@@ -1,27 +1,39 @@
 ---
-import '@styles/base.css'
+import "@styles/base.css";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-		<script src="https://kit.fontawesome.com/3109afda91.js" crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/crown.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Quiero invitarte con mucho cariño a mi bautizo y cumpleaños, que se celebrarán el 2 de febrero de 2025. ¡Será un día muy especial y me encantaría contar con tu presencia!"
+    />
+    <meta
+      name="og:description"
+      content="Quiero invitarte con mucho cariño a mi bautizo y cumpleaños, que se celebrarán el 2 de febrero de 2025. ¡Será un día muy especial y me encantaría contar con tu presencia!"
+    />
+    <meta name="keywords" content="bautismo, invitacion, cumpleaños" />
+    <meta name="og:title" content="Alice Menendez - Invitación" />
+    <meta name="og:image" content="/crown.svg" />
+    <meta name="og:site_name" content="Alice Menendez - Invitación" />
+    <title>Alice Menendez - Invitación</title>
+    <script src="https://kit.fontawesome.com/3109afda91.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>

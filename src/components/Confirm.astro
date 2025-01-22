@@ -1,18 +1,25 @@
+---
+import star from "../assets/peach-2.png";
+---
+
 <div class="dark-section">
   <section>
     <a href="https://wa.link/thynwc" target="_blank" rel="noopener noreferrer"
       ><i class="fa-brands fa-whatsapp"></i>Confirma tu asistencia aquí
     </a>
+
+    <img class="star" src={star.src} alt="Circulos" fetchpriority="high" />
   </section>
 </div>
 
 <style>
   section {
     text-align: center;
-    font-size: 40px;
+    font-size: 1.5rem;
     justify-content: center;
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   a {
@@ -28,5 +35,18 @@
     font-size: 50px;
     color: #fec7f7;
     margin-right: 10px;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    right: 10%;
+    width: 10%;
+  }
+
+  @media (min-width: 1400px) {
+    section {
+      font-size: 2.5rem;
+    }
   }
 </style>
