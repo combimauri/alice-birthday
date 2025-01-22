@@ -7,7 +7,7 @@ import circles from "../assets/circles.svg";
   <div class="map__container">
     <img class="circles left" src={circles.src} alt="Circulos" fetchpriority="high" />
     <img class="circles right" src={circles.src} alt="Circulos" fetchpriority="high" />
-    <div class="map__view">
+    <div class="map__view second-view">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.444466045668!2d-66.14868802328282!3d-17.390444883497164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e373ff41fd87cd%3A0xc53805a2c789d929!2sSan%20Pedro%20Church!5e0!3m2!1sen!2sbo!4v1737496619197!5m2!1sen!2sbo"
         class="map__iframe"
@@ -130,11 +130,21 @@ import circles from "../assets/circles.svg";
     }
   }
 
+  .second-view {
+    order: 1;
+  }
+
   @media (min-width: 1400px) {
     .circles {
       &.bottom {
         right: -46px;
       }
+    }
+  }
+
+  @media (min-width: 993px) {
+    .second-view {
+      order: 0;
     }
   }
 </style>
