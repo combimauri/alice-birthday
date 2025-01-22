@@ -17,7 +17,7 @@ import clouds from "../assets/nubes.png";
       <p>Jose Mauricio Arce Torrez</p>
     </div>
   </div>
-  <p>INVITAN A CELEBRAR EL BAUTISMO Y CUMPLEAÑOS DE</p>
+  <p class="invitation">INVITAN A CELEBRAR EL BAUTISMO Y CUMPLEAÑOS DE</p>
   <h1 class="title">Alice Dayana Menendez Garcia</h1>
   <div class="banner__place-and-date">
     <p><i class="fa-solid fa-church"></i> Bautismo</p>
@@ -148,6 +148,10 @@ import clouds from "../assets/nubes.png";
   .move-slow {
     transform: translateY(0%);
     animation: moveRightLeftSlow 50s linear infinite; /* Animación continua */
+  }
+
+  .invitation {
+    padding: 0 15px;
   }
 
   @keyframes moveRightLeft {
